@@ -12,7 +12,7 @@ class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        addbutton()
         // Do any additional setup after loading the view.
     }
 

@@ -52,4 +52,29 @@ class BaseViewController: UIViewController {
         print(contraint.constant)
     }
     
+    
+    
+    func addbutton(){
+        
+        let cameraButtonItem = UIBarButtonItem(barButtonSystemItem: .Camera, target: self, action: #selector(takeAPicture(_:)))
+        
+        //navigationItem.leftBarButtonItem = cameraButtonItem
+        
+        let buttonRight = UIBarButtonItem(image: UIImage(named: "EMAIL"), style: .Plain, target: self, action: #selector(SendEmail))
+        
+        navigationItem.setRightBarButtonItems([cameraButtonItem,buttonRight],animated: true)
+        
+    }
+    
+    func takeAPicture(sender: AnyObject){
+        print("take a picture")
+        
+    }
+    
+    func SendEmail(sender: AnyObject){
+        
+        print("sending email")
+    }
+
+    
 }
